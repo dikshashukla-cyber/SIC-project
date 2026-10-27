@@ -1,4 +1,4 @@
-"""IBM Z-inspired Autonomic Habit Resiliency & Uptime Engine.
+"""Autonomic Habit Resiliency & Uptime Engine.
 
 Applies systems reliability concepts (availability, uptime, MTTR) to human wellness habits:
 - Habit Availability / Uptime %: Ratio of days where essential baseline routines were maintained.

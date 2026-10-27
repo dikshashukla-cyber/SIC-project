@@ -119,10 +119,10 @@ def answer_wellness_query(
         )
 
     # 7. Resiliency / Uptime query
-    if any(k in q for k in ["resilience", "uptime", "availability", "ibm z", "recovery", "mttr"]):
+    if any(k in q for k in ["resilience", "uptime", "availability", "recovery", "mttr"]):
         res = calculate_autonomic_resiliency(clean_df, goals)
         return (
-            f"🛡️ **IBM Z Autonomic Habit Resiliency**:  \n"
+            f"🛡️ **Autonomic Habit Resiliency**:  \n"
             f"Your **Habit Availability stands at {res.uptime_pct}% Uptime** across {res.total_active_days} days.  \n"
             f"- Status: **{res.autonomic_health_status}**  \n"
             f"- Mean Time to Recovery (MTTR): **{res.mean_time_to_recovery_days} days** (average time to bounce back to routine after a drop).  \n"

@@ -1,4 +1,4 @@
-"""Executive Wellness Report generator (HTML/Printable format) for IBM Z Datathon 2026."""
+"""Executive Wellness Report generator (HTML/Printable format)."""
 
 from __future__ import annotations
 
@@ -90,7 +90,7 @@ def generate_executive_html_report(
         resilience_box_html = f"""
         <div style="display: flex; justify-content: space-between; align-items: center; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px 20px; margin-bottom: 20px;">
             <div>
-                <div style="font-size: 0.78rem; font-weight: 700; color: #166534; text-transform: uppercase;">🛡️ IBM Z Autonomic Habit Resiliency</div>
+                <div style="font-size: 0.78rem; font-weight: 700; color: #166534; text-transform: uppercase;">🛡️ Autonomic Habit Resiliency</div>
                 <div style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-top: 2px;">{resilience_report.autonomic_health_status}</div>
                 <div style="font-size: 0.85rem; color: #475569; margin-top: 2px;">{resilience_report.resilience_summary}</div>
             </div>
@@ -142,7 +142,7 @@ def generate_executive_html_report(
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Executive Wellness Report — IBM Z Datathon 2026</title>
+<title>Executive Wellness Report — Personal Wellness Platform</title>
 <style>
     body {{
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -226,7 +226,7 @@ def generate_executive_html_report(
     <div class="header">
         <h1 style="margin: 0; font-size: 1.8rem; color: #0f172a;">Executive Wellness Report</h1>
         <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
-            IBM Z Datathon 2026 Prototype &bull; Generated: {now_str}
+            Personal Wellness Platform &bull; Generated: {now_str}
             {f'&bull; Profile: <strong>{persona_name}</strong>' if persona_name else ''}
         </div>
     </div>
@@ -288,7 +288,7 @@ def generate_executive_html_report(
     </div>
 
     <div style="margin-top: 36px; padding-top: 12px; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; text-align: center;">
-        Prepared with Wellness Dashboard (Unique Edition) &bull; IBM Z Datathon 2026 Prototype &bull; Single-User Personal Tracking
+        Prepared with Personal Wellness Dashboard &bull; Single-User Personal Tracking
     </div>
 </div>
 </body>

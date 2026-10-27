@@ -1,4 +1,4 @@
-"""IBM Z Pervasive Privacy & Data Sovereignty Vault.
+"""Enterprise Privacy & Data Sovereignty Vault.
 
 Implements confidential computing and data sovereignty principles for personal wellness data:
 - Cryptographic SHA-256 provenance fingerprinting
@@ -40,7 +40,7 @@ def audit_session_security(df: pd.DataFrame) -> SecurityAuditReport:
         records_count = len(df)
 
     statement = (
-        "Compliant with IBM Z Pervasive Privacy standard: Zero personally identifiable records (PII) "
+        "Compliant with Enterprise Privacy standard: Zero personally identifiable records (PII) "
         "are retained, persisted to external databases, or shared with third-party tracking services. "
         "Processing occurs strictly inside ephemeral Python virtual memory."
     )

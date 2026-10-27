@@ -61,7 +61,7 @@ st.set_page_config(
 # State Management Initialization
 # ---------------------------------------------------------
 if "theme_mode" not in st.session_state:
-    st.session_state.theme_mode = "IBM Z Mainframe (Dark)"
+    st.session_state.theme_mode = "Enterprise Light"
 
 if "goals" not in st.session_state:
     st.session_state.goals = metrics.UserGoals(
@@ -77,7 +77,7 @@ if "active_data_source" not in st.session_state:
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        ("assistant", "Hello! I am your local, deterministic Z-Cognitive Habit Assistant. Ask me anything about your wellness data, trends, sleep consistency, or anomalies!")
+        ("assistant", "Hello! I am your local, deterministic Cognitive Habit Assistant. Ask me anything about your wellness data, trends, sleep consistency, or anomalies!")
     ]
 
 # Determine dark mode boolean
@@ -154,11 +154,11 @@ with st.sidebar:
     selected_theme = st.selectbox(
         "Interface Palette:",
         options=[
-            "IBM Z Mainframe (Dark)",
-            "Cyberpunk Bio-Hacker (Neon Glass)",
             "Enterprise Light",
+            "Executive Dark",
+            "Cyberpunk Bio-Hacker (Neon Glass)",
         ],
-        index=["IBM Z Mainframe (Dark)", "Cyberpunk Bio-Hacker (Neon Glass)", "Enterprise Light"].index(st.session_state.theme_mode),
+        index=["Enterprise Light", "Executive Dark", "Cyberpunk Bio-Hacker (Neon Glass)"].index(st.session_state.theme_mode),
         key="theme_selector",
     )
     if selected_theme != st.session_state.theme_mode:
@@ -449,7 +449,7 @@ with tab_cockpit:
             st.markdown(
                 f"""
                 <div style="background: {'#182230' if is_dark else '#ffffff'}; border: 1px solid {'#334155' if is_dark else '#e2e8f0'}; border-radius: 12px; padding: 18px 20px; text-align: center;">
-                    <div style="font-size: 3.2rem; font-weight: 800; color: {comp_color}; font-family: 'IBM Plex Mono', monospace;">
+                    <div style="font-size: 3.2rem; font-weight: 800; color: {comp_color}; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                         {comp.overall_score} <span style="font-size: 1.5rem; color: {'#94a3b8' if is_dark else '#64748b'};">/ 100</span>
                     </div>
                     <div style="display: inline-block; background: {comp_color}22; color: {comp_color}; border: 1px solid {comp_color}66; border-radius: 16px; padding: 4px 14px; font-weight: 700; font-size: 0.88rem; margin-bottom: 12px;">
@@ -491,7 +491,7 @@ with tab_cockpit:
                             <div style="font-weight: 700; font-size: 0.95rem; color: {'#f8fafc' if is_dark else '#0f172a'};">
                                 {icon} {s_info.metric_name}
                             </div>
-                            <div style="font-weight: 800; font-size: 1.15rem; color: #0284c7; font-family: 'IBM Plex Mono', monospace;">
+                            <div style="font-weight: 800; font-size: 1.15rem; color: #0284c7; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                                 {s_info.current_streak} <span style="font-size: 0.8rem; font-weight: 500; color: {'#94a3b8' if is_dark else '#64748b'};">days active</span>
                             </div>
                         </div>
@@ -517,7 +517,7 @@ with tab_cockpit:
                     f"""
                     <div style="background: {'#182230' if is_dark else '#ffffff'}; border: 1px solid {'#334155' if is_dark else '#e2e8f0'}; border-radius: 10px; padding: 14px 16px; text-align: center;">
                         <div style="font-size: 0.78rem; text-transform: uppercase; color: {'#94a3b8' if is_dark else '#64748b'};">Readiness Index</div>
-                        <div style="font-size: 2.5rem; font-weight: 800; color: {vitality_rep.zone_color}; font-family: 'IBM Plex Mono', monospace;">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: {vitality_rep.zone_color}; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                             {vitality_rep.vitality_score}
                         </div>
                         <div style="font-weight: 700; color: {vitality_rep.zone_color}; font-size: 0.9rem;">
@@ -811,7 +811,7 @@ with tab_twin:
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
                         <div>
                             <div style="font-size: 0.78rem; color: {'#94a3b8' if is_dark else '#64748b'}; text-transform: uppercase;">Estimated Vitality Age</div>
-                            <div style="font-size: 2.6rem; font-weight: 800; color: {bio_age_rep.status_color}; font-family: 'IBM Plex Mono', monospace;">
+                            <div style="font-size: 2.6rem; font-weight: 800; color: {bio_age_rep.status_color}; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                                 {bio_age_rep.biological_age:.1f} <span style="font-size: 1rem; color: {'#94a3b8' if is_dark else '#64748b'};">yrs</span>
                             </div>
                         </div>
@@ -844,7 +844,7 @@ with tab_twin:
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
                         <div>
                             <div style="font-size: 0.78rem; color: {'#94a3b8' if is_dark else '#64748b'}; text-transform: uppercase;">Momentum Index</div>
-                            <div style="font-size: 2.6rem; font-weight: 800; color: {neuro_rep.status_color}; font-family: 'IBM Plex Mono', monospace;">
+                            <div style="font-size: 2.6rem; font-weight: 800; color: {neuro_rep.status_color}; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                                 {neuro_rep.momentum_score:.0f} <span style="font-size: 1rem; color: {'#94a3b8' if is_dark else '#64748b'};">/ 100</span>
                             </div>
                         </div>
@@ -910,13 +910,13 @@ with tab_sim:
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
                         <div>
                             <div style="font-size: 0.78rem; text-transform: uppercase; color: {'#94a3b8' if is_dark else '#64748b'};">Projected Composite Index</div>
-                            <div style="font-size: 2.5rem; font-weight: 800; color: {'#38bdf8' if is_dark else '#0284c7'}; font-family: 'IBM Plex Mono', monospace;">
+                            <div style="font-size: 2.5rem; font-weight: 800; color: {'#38bdf8' if is_dark else '#0284c7'}; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                                 {sim_res.projected_composite} <span style="font-size: 1.1rem; color: {diff_color};">({diff_sign}{score_diff} pts)</span>
                             </div>
                         </div>
                         <div style="text-align: right;">
                             <div style="font-size: 0.78rem; text-transform: uppercase; color: {'#94a3b8' if is_dark else '#64748b'};">Baseline Index</div>
-                            <div style="font-size: 1.8rem; font-weight: 700; color: {'#cbd5e1' if is_dark else '#475569'}; font-family: 'IBM Plex Mono', monospace;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: {'#cbd5e1' if is_dark else '#475569'}; font-family: 'JetBrains Mono', 'Fira Code', monospace;">
                                 {sim_res.baseline_composite}
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-"""Evaluator persona datasets generator for IBM Z Datathon 2026.
+"""Evaluator persona datasets generator for Personal Wellness Platform.
 
 Provides 3 distinct pre-configured synthetic personas for live demonstration:
 1. The Active Professional: Highly consistent weekday routine, high hydration, weekend outdoor activities.
